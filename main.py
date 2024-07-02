@@ -11,4 +11,33 @@ class BattleshipGame:
     def place_ships(self):
         for size in self.ships.values():
             self.place_ship_randomly(size)
- 
+    def place_ship_randomly(self, size):
+        placed = False
+        while not placed:
+            orientation = random.choice(['H', 'V'])
+            if orientation == 'H':
+                row = random.randint(0, self.grid_size - 1)
+                col = random.randint(0, self.grid_size - size)
+            else:
+                row = random.randint(0, self.grid_size - size)
+                col = random.randint(0, self.grid_size - 1)
+            if self.can_place_ship(row, col, size, orientation):
+                self.set_ship(row, col, size, orientation)
+                placed = True
+
+    def can_place_ship(self, row, col, size, orientation):
+        for i in range(size):
+            if orientation == 'H':
+                if self.computer_board[row][col + i] != '~':
+                    return False
+            else:
+                if self.computer_board[row + i][col] != '~':
+                    return False
+        return True
+
+    def set_ship(self, row, col, size, orientation):
+        for i in range(size):
+            if orientation == 'H':
+                self.computer_board[row][col + i] = 'S'
+            else:
+                self.computer_board[row + i][col] = 'S',
