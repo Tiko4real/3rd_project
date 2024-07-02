@@ -11,3 +11,4 @@ class BattleshipGame:
     def place_ships(self):
         for size in self.ships.values():
             self.place_ship_randomly(size)
+ 
