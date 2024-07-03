@@ -41,3 +41,9 @@ class BattleshipGame:
                 self.computer_board[row][col + i] = 'S'
             else:
                 self.computer_board[row + i][col] = 'S',
+    def print_board(self, board, hide_ships=False):
+        for row in board:
+            if hide_ships:
+                print(" ".join(['~' if cell == 'S' else cell for cell in row]))
+            else:
+                print(" ".join(row))
