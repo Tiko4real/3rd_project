@@ -57,7 +57,7 @@ class BattleshipGame:
             else:
                 print("Guess is off-grid. Try again.")
 
-    def check_gues(self, row, col):
+    def check_guess(self, row, col):
         if self.computer_board[row][col] == 'S':
             self.player_board[row][col] = 'X'
             self.computer_board[row][col] = 'X'
@@ -74,4 +74,18 @@ class BattleshipGame:
             if 'S' in row:
                 return False
         return True
+    
+    def play(self):
+        print("Welcome to Battleship!")
+        while not self.is_game_over():
+            self.print_board(self.player_board, hide_ships=True)
+            row, col = self.get_guess()
+            self.check_guess(row, col)
+        print("Congratulations! You sunk all the battleships!")
+        self.print_board(self.computer_board)
+
+if __name__ == "__main__":
+    grid_size = int(input("Enter the grid size (exempel, 5 for 5x5 grid): "))
+    game = BattleshipGame(grid_size)
+    game.play()
 
