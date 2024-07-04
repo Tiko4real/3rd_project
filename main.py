@@ -69,4 +69,9 @@ class BattleshipGame:
         else:
             print("Already guessed that. Try again.")
 
+    def is_game_over(self):
+        for row in self.computer_board:
+            if 'S' in row:
+                return False
+        return True
 
