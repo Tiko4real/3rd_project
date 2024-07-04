@@ -1,6 +1,7 @@
 import random
 
 class BattleshipGame:
+    #This function  create the grind net for the game and placement logics"
     def __init__(self, grid_size):
         self.grid_size = grid_size
         self.player_board = [['~' for _ in range(grid_size)] for _ in range(grid_size)]
@@ -47,3 +48,25 @@ class BattleshipGame:
                 print(" ".join(['~' if cell == 'S' else cell for cell in row]))
             else:
                 print(" ".join(row))
+        def get_guess(self):
+         while True:
+            guess = input("Enter your guess (row,col): ")
+            row, col = map(int, guess.split(','))
+            if 0 <= row < self.grid_size and 0 <= col < self.grid_size:
+                return row, col
+            else:
+                print("Guess is off-grid. Try again.")
+
+    def check_gues(self, row, col):
+        if self.computer_board[row][col] == 'S':
+            self.player_board[row][col] = 'X'
+            self.computer_board[row][col] = 'X'
+            print("Hit!")
+        elif self.computer_board[row][col] == '~':
+            self.player_board[row][col] = 'O'
+            self.computer_board[row][col] = 'O'
+            print("Miss!")
+        else:
+            print("Already guessed that. Try again.")
+
+
