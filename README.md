@@ -36,7 +36,9 @@ In this implementation of Battleship, you will play against the computer. The ga
 
 ## Logic Flowchart
 
-![Flowchart](/readme_images/battleship_flowchart.png)
+
+   - Used Draw.io to make a Flowchart for the game [View](images/flowchart.png)
+
 
 ## User Experience (UX)
 
