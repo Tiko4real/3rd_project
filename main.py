@@ -145,7 +145,7 @@ def main():
             print("Maybe next time!")
             break
         else:
-            print("Invalid input. Please enter 'y' or 'n'.")
+            print("Invalid input. Please enter 'y' for Yes or 'n' for No.")
         play_again = input("Would you like to play again? (y/n): ").lower()
         if play_again == 'n':
             print("Thanks for playing! Goodbye!")
