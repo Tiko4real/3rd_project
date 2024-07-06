@@ -71,7 +71,14 @@ The game was tested on visual studio
 - Friends were asked to play the game and provide feedback.
 
 
-## Deployment
+### Acknowledgements
+
+-   My mentor for very helpful feedback.
+-   [Python functions](https://www.programiz.com/python-programming/function)
+-   [Battleship game exempel in python](http://pythonfiddle.com/battleships-game-in-python/)
+-   [Battleship tutorial](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=317s)
+-   [import random in python](https://docs.python.org/3/library/random.html)
+-   [Exempeles for import random with simpler tutorial](https://www.toppr.com/guides/python-guide/tutorials/modules/modules/random/use-random-module-to-generate-random-numbers-in-python/)
 
 ### GitHub Pages
 
