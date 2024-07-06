@@ -1,13 +1,17 @@
 {
-    "postinstall": "cd ci-xterm && npm install",
+    "name": "3rd_project",
+    "version": "1.0.0",
+    "description": "Description of your project",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
     "dependencies": {
+      "express": "^4.17.2",
       "node-static": "^0.7.11",
       "python-shell": "^2.0.3",
       "socket.io": "^3.1.2",
       "xterm": "^4.10.0"
-    },
-    "scripts": {
-      "start": "node server.js"
     }
   }
   
