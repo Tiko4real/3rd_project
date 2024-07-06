@@ -1,4 +1,5 @@
 # Battleship Game
+[The project ](https://battleship---game-e98015094388.herokuapp.com/)
 <h2 align="center"><img src="images/game_preview.png"></h2>
 Battleship Game is a classic and strategic guessing game where you try to sink the computer's ship before it sinks yours. The game involves placing your ship on a grid, making guesses about the location of the computer's ship, and responding to the computer's guesses about your ship.
 
