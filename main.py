@@ -37,8 +37,8 @@ class BattleshipGame:
     def place_ship_manually(self, board, ships_list, size):
         placed = False
         while not placed:
-            orientation = input("Enter orientation (H for horizontal, V for vertical): ").upper()
-            row, col = map(int, input("Enter starting position (row,col): ").split(','))
+            orientation = input("Enter orientation (H for horizontal, V for vertical): \n").upper()
+            row, col = map(int, input("Enter starting position (row,col): \n").split(','))
             if orientation in ['H', 'V'] and self.can_place_ship(board, row, col, size, orientation):
                 self.set_ship(board, ships_list, row, col, size, orientation)
                 placed = True
@@ -75,7 +75,7 @@ class BattleshipGame:
 
     def get_guess(self):
         while True:
-            guess = input("Enter your guess (row,col): ")
+            guess = input("Enter your guess (row,col): \n")
             row, col = map(int, guess.split(','))
             if 0 <= row < self.grid_size and 0 <= col < self.grid_size:
                 return row, col
@@ -137,7 +137,7 @@ class BattleshipGame:
 def main():
     print("Welcome to the Battleship game!")
     while True:
-        start_game = input("Would you like to start the game? (y/n): ").lower()
+        start_game = input("Would you like to start the game? (y/n): \n").lower()
         if start_game == 'y':
             game = BattleshipGame()
             game.play()
@@ -146,7 +146,7 @@ def main():
             break
         else:
             print("Invalid input. Please enter 'y' for Yes or 'n' for No.")
-        play_again = input("Would you like to play again? (y/n): ").lower()
+        play_again = input("Would you like to play again? (y/n): \n").lower()
         if play_again == 'n':
             print("Thanks for playing! Goodbye!")
             break
